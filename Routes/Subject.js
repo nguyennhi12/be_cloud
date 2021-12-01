@@ -18,7 +18,7 @@ router.route('/getsubjectbynganh').post(midleware.authorization,sql.getsubjectby
 router.route('/getbuoibylop').post(midleware.authorization,sql.getbuoibylop)
 router.route('/dangkymonhoc').post(midleware.authorization_dangkyhocphan,sql.dangkymonhoc)
 router.route('/getdanhsachdangkymon').post(midleware.authorization,sql.getdanhsachdangkymon)
-
+router.route('/getdanhmucbyid').get(midleware.authorization,sql.getdanhmuc_id)
 
 
 module.exports = router;

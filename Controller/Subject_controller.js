@@ -52,6 +52,29 @@ async function getdanhmucnganh(req,res){
     }
 }
 
+async function getdanhmuc_id(req,res){
+    if(req.authcode==200){  
+        let pool = await mssql.connect(config);
+                let query = await pool.request()                   
+                                        .query(`select id_lop from lopmh`)                                         
+        console.log(query.recordset)
+                return res.status(200).json({
+                    statusCode:200,
+                    message:"successfully",
+                    data: query.recordset,
+                });
+ 
+    }else{
+        return res.status(400).json({
+            statusCode:400,
+            message:"Bạn không có quyền xem danh mục id",
+           
+        });
+    }
+}
+
+
+
 async function getsubjectbyid(req,res){
     if(req.authcode==200){  
         let pool = await mssql.connect(config);
@@ -135,7 +158,7 @@ async function dangkymonhoc(req,res){
         let pool = await mssql.connect(config);
         try{
             let query = await pool.request()  
-                                        .input('id_user', mssql.NVarChar, req.id_user)    
+                                        .input('id_user', mssql.NVarChar, req.id_user[0])    
                                         .input('id_lop',mssql.NVarChar, req.body.id_lop)              
                                         .query(`insert into Dangkymon values (@id_user,@id_lop,getdate())`)     
             let query2 = await pool.request()                                         
@@ -202,4 +225,5 @@ module.exports ={
     getbuoibylop: getbuoibylop,
     dangkymonhoc: dangkymonhoc,
     getdanhsachdangkymon: getdanhsachdangkymon,
+    getdanhmuc_id:getdanhmuc_id
 }

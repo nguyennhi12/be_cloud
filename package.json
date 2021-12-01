@@ -1,0 +1,44 @@
+{
+  "name": "myfoodapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "nodemon": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.7",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.2",
+    "express": "~4.16.1",
+    "express-session": "^1.17.1",
+    "form-data": "^3.0.1",
+    "formidable": "^1.2.2",
+    "fs": "^0.0.1-security",
+    "googleapis": "^88.2.0",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "~1.9.1",
+    "mssql": "^7.2.0",
+    "multer": "^1.4.3",
+    "multiparty": "^4.2.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.0",
+    "node-pre-gyp": "^0.17.0",
+    "nodemailer": "^6.6.5",
+    "passport": "^0.5.0",
+    "passport-facebook": "^3.0.0",
+    "passport-local": "^1.0.0",
+    "rand-token": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "nodemon": "^2.0.13"
+  }
+}

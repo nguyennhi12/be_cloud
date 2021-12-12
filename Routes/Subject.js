@@ -15,7 +15,7 @@ router.route('/getsubjectbyname').post(midleware.authorization,sql.getsubjectbyn
 router.route('/getdanhmucnganh').get(midleware.authorization,sql.getdanhmucnganh)
 router.route('/getsubjectbyid').post(midleware.authorization,sql.getsubjectbyid)
 router.route('/getsubjectbynganh').post(midleware.authorization,sql.getsubjectbynganh)
-router.route('/getbuoibylop').post(midleware.authorization,sql.getbuoibylop)
+//router.route('/getbuoibylop').post(midleware.authorization,sql.getbuoibylop)
 router.route('/dangkymonhoc').post(midleware.authorization_dangkyhocphan,sql.dangkymonhoc)
 router.route('/getdanhsachdangkymon').post(midleware.authorization,sql.getdanhsachdangkymon)
 router.route('/getdanhmucbyid').get(midleware.authorization,sql.getdanhmuc_id)

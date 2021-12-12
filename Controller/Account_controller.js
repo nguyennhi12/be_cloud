@@ -4,6 +4,7 @@ const jwt=require('jsonwebtoken')
 const formidable = require('formidable')
 //sendmail
 async function check_login(account){
+    console.log(account)
     try {    
         if(!account.username){
             if(!account.password){
